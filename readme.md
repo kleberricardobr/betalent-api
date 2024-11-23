@@ -55,17 +55,17 @@ Os objetos do banco de dados (MySQL) devem ser configurados via migration e para
   - Exemplo de JSON necessário no Body da requisição:
   ```
     {
-	  "email": "kleber@kleber",
-	  "password": "123kleber"
+	    "email": "kleber@kleber",
+	    "password": "123kleber"
     }
   ```
 
   - Exemplo de resposta bem sucedida:
   ```
     {
-	  "type": "bearer",
-	  "token": "MQ.iP-tMar4gkZ5ocbgBV6-FV8p1rMyDrC3a_2anD6jPQ7r0em0rMSPXUmunzcv",
-	  "expires_at": "2024-11-23T12:34:01.404-03:00"
+	    "type": "bearer",
+	    "token": "MQ.iP-tMar4gkZ5ocbgBV6-FV8p1rMyDrC3a_2anD6jPQ7r0em0rMSPXUmunzcv",
+	    "expires_at": "2024-11-23T12:34:01.404-03:00"
     }
   ```
 
@@ -110,18 +110,18 @@ Os objetos do banco de dados (MySQL) devem ser configurados via migration e para
   - Exemplo de JSON de resposta:
   ```
   {
-	"id": 2,
-	"nome": "Teste - 123",
-	"cpf": "45456456",
-	"endereco": {
-		"id": 3,
-		"logradouro": "rua das testes 123",
-		"numero": "164",
-		"cep": "12123",
-		"cidade": "Mococa",
-		"estado": "SP"
-	},
-	"telefones": [
+	  "id": 2,
+	  "nome": "Teste - 123",
+	  "cpf": "45456456",
+	  "endereco": {
+		  "id": 3,
+		  "logradouro": "rua das testes 123",
+		  "numero": "164",
+		  "cep": "12123",
+		  "cidade": "Mococa",
+		  "estado": "SP"
+	  },
+	  "telefones": [
 		{
 			"id": 3,
 			"numero": "3333"
@@ -155,8 +155,7 @@ Os objetos do banco de dados (MySQL) devem ser configurados via migration e para
   		"numero": "164",
   		"cep": "12123",
   		"cidade": "Mococa",
-  		"estado": "SP"
-  		
+  		"estado": "SP"  		
   	}
   }
   ```
@@ -180,7 +179,7 @@ Os objetos do banco de dados (MySQL) devem ser configurados via migration e para
   {
   	"produtos": [
   		{
-              "id": 1,
+        "id": 1,
   			"descricao": "666999",
   			"codigo_barras": "99966",
   			"preco": 1.93
@@ -248,4 +247,3 @@ Os objetos do banco de dados (MySQL) devem ser configurados via migration e para
   	"codigoBarras": "99966"
   }
 ```
-  '''
