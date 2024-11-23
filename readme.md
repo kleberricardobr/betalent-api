@@ -1,4 +1,5 @@
 O projeto foi desenvolvido utilizado o Framework **Adonis5** com o ORM **Lucid**.
+Node version: v22.11.0
 
 # Configurações
 
