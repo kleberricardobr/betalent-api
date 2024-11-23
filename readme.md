@@ -41,8 +41,8 @@ Os objetos do banco de dados (MySQL) devem ser configurados via migration e para
   - Exemplo de JSON necessário no Body da requisição:
   ```
     {
-	"email": "kleber@kleber",
-	"password": "123kleber"
+	    "email": "kleber@kleber",
+	    "password": "123kleber"
     }
   ```
 
@@ -179,7 +179,7 @@ Os objetos do banco de dados (MySQL) devem ser configurados via migration e para
   {
   	"produtos": [
   		{
-        "id": 1,
+            "id": 1,
   			"descricao": "666999",
   			"codigo_barras": "99966",
   			"preco": 1.93
