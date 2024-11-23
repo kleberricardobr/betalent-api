@@ -39,12 +39,12 @@ Os objetos do banco de dados (MySQL) devem ser configurados via migration e para
   - Cria um usuario para que seja possível realizar o login e recuperar um token
 
   - Exemplo de JSON necessário no Body da requisição:
-  '''
+  ```
     {
 	"email": "kleber@kleber",
 	"password": "123kleber"
     }
-  '''
+  ```
 
 ## /betalent/login    
 
@@ -53,21 +53,21 @@ Os objetos do banco de dados (MySQL) devem ser configurados via migration e para
   - Realiza o login recuperando um token válido por 60 minutos  
 
   - Exemplo de JSON necessário no Body da requisição:
-  '''
+  ```
     {
 	  "email": "kleber@kleber",
 	  "password": "123kleber"
     }
-  '''
+  ```
 
   - Exemplo de resposta bem sucedida:
-  '''
+  ```
     {
 	  "type": "bearer",
 	  "token": "MQ.iP-tMar4gkZ5ocbgBV6-FV8p1rMyDrC3a_2anD6jPQ7r0em0rMSPXUmunzcv",
 	  "expires_at": "2024-11-23T12:34:01.404-03:00"
     }
-  '''
+  ```
 
 **Para todas as rotas abaixo adicionar no Header --> "Authorization: Bearer token_recuperado_do_login"**
 
@@ -77,7 +77,7 @@ Os objetos do banco de dados (MySQL) devem ser configurados via migration e para
   - Recupera informações principais dos clientes 
 
   - Exemplo de JSON de resposta:
-  '''
+  ```
   {
 	"clientes": [
 		{
@@ -101,14 +101,14 @@ Os objetos do banco de dados (MySQL) devem ser configurados via migration e para
 		}
 	]
   }
-  '''
+  ```
   
   ### GET  /betalent/clientes/:id --- clientes.show › ClientesController.show
   - Recupera dados detalhados de um cliente (informar seu **id** no final da url)
   - Para filtrar mês e/ou ano, utilizar query params. Exemplo: /betalent/clientes/10/?mes=11&ano=2024
 
   - Exemplo de JSON de resposta:
-  '''
+  ```
   {
 	"id": 2,
 	"nome": "Teste - 123",
@@ -137,13 +137,13 @@ Os objetos do banco de dados (MySQL) devem ser configurados via migration e para
 		}
 	]
   }
-  ''' 
+  ``` 
 
   ### POST  /betalent/clientes --- clientes.store › ClientesController.store  
   - Cadastra um novo cliente
 
   - Exemplo de JSON a ser enviado no Body da requisição:
-  '''
+  ```
   {
   	"nome": "Teste",
   	"cpf": "111.111.111.11",
@@ -159,7 +159,7 @@ Os objetos do banco de dados (MySQL) devem ser configurados via migration e para
   		
   	}
   }
-  '''
+  ```
 
   ### PUT /betalent/clientes/:id --- clientes.update › ClientesController.update
   - Atualiza os dados de um cliente cadastrado 
@@ -176,7 +176,7 @@ Os objetos do banco de dados (MySQL) devem ser configurados via migration e para
   - Recupera dados principais dos produtos
   
   - Exemplo de JSON retornado:
-  '''
+  ```
   {
   	"produtos": [
   		{
@@ -187,13 +187,13 @@ Os objetos do banco de dados (MySQL) devem ser configurados via migration e para
   		}
   	]
   }
-  '''
+  ```
   
   ### GET  /betalent/produtos/:id --- produtos.show › ProdutosController.show
   - Recupera informações detalhadas de um produto
   
   - Exemplo de JSON retornado:
-  '''
+  ```
   {
   	"produto": {
   		"id": 1,
@@ -204,31 +204,31 @@ Os objetos do banco de dados (MySQL) devem ser configurados via migration e para
   		"preco": 1.93
   	}
   }
-  '''
+  ```
   
   ### POST  /betalent/produtos --- produtos.store › ProdutosController.store
   - Inclui um novo produto
   
   - Exemplo de JSON a ser enviado no Body da requisição:
-  '''
+  ```
   {
   	"codigoBarras": "12344",
   	"descricao": "descricao 123",
   	"preco": "1.93"	
   }
-  '''
+  ```
   
   ### PUT  /betalent/produtos/:id --- produtos.update › ProdutosController.update
   - Atualiza um produto existente
   
   - Exemplo de JSON a ser enviado no Body da requisição:
-  '''
+  ```
   {
   	"codigoBarras": "12344",
   	"descricao": "descricao 123",
   	"preco": "1.93"	
   }
-  '''
+  ```
   
   ### DELETE  /betalent/produtos/:id --- produtos.destroy › ProdutosController.destroy
   - Remove um produto existente
@@ -241,10 +241,11 @@ Os objetos do banco de dados (MySQL) devem ser configurados via migration e para
   - Registra um venda (a relação é de 1 para 1 tanto com o cliente, quanto com o produto)
   
   - Exemplo de JSON a ser enviado no corpo da requisição:
-  '''
+  ```
   {
   	"quantidade": "10",
   	"clienteId": "2",
   	"codigoBarras": "99966"
   }
+```
   '''
