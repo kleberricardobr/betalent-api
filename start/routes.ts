@@ -28,5 +28,5 @@ Route.group(() => {
     Route.resource("/clientes", "ClientesController").apiOnly();
     Route.resource("/produtos", "ProdutosController").apiOnly();
     Route.post("/vendas", "VendasController.store");
-  })//.middleware("auth");
+  }).middleware("auth");
 }).prefix("/betalent");
